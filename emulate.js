@@ -257,9 +257,7 @@ function mainLoop () {
         debug('ISO request: %j', msg);
         debug('ISO request from %d to %d Data PGN: %i', msg.pgn.src, msg.pgn.dst, PGN);
         msg.pgn.fields.PGN = PGN;
-        if (PGN == 126998) {  // testing...
-          sendConfig();
-        } else if (PGN == 130579) {
+        if (PGN == 130579) {
           sendSystemConfig();
         } else if (PGN == 130847) {
           send130847();
