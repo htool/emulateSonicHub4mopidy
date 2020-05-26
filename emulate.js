@@ -207,7 +207,7 @@ function setUnitName () {
 }
 
 function setSource () {
-  setSourcePGN = "%s,3,126720,%s,%s,5,a3,99,02,00,01"
+  setSourcePGN = "%s,3,130816,%s,%s,6,13,99,00,06,00,04"
   setSourcePGN = util.format(setSourcePGN, (new Date()).toISOString(), canbus.candevice.address, 255);
   canbus.sendPGN(setSourcePGN);
 }
@@ -308,7 +308,7 @@ function mainLoop () {
  //             requestState();
               // startup();
               // sourceSelection();
-              // setSource();
+              setSource();
               // setUnitName();
               // setTransport();
               // setMediaControl();
